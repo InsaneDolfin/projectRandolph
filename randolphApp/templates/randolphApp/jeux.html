@@ -1,0 +1,9 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'randolphApp/style.css' %}" />
+
+<h1>Liste des Jeux</h1>
+<ul>
+    {% for jeu in liste_jeux %}
+        <li><a href="/randolphApp/jeux/{{ jeu.id }}/">{{ jeu.name }}</a></li>
+    {% endfor %}
+</ul>
